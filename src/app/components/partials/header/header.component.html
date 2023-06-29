@@ -12,7 +12,11 @@
             <a>Sair</a>
           </div>
         </li>
-        <li><a routerLink="/cart-page" class="cart-icon">Cesta <span>3</span></a></li>
+        <li>
+          <a routerLink="/cart-page" class="cart-icon"
+            >Cesta <span *ngIf="cartQuantity">{{ cartQuantity }}</span></a
+          >
+        </li>
       </ul>
     </nav>
   </div>
