@@ -2,7 +2,7 @@ header {
   position: relative;
   background: white;
   padding: 0;
-  border-bottom: 1px solid #e72929;
+  border-bottom: 1px solid #ccc;
 }
 
 a {
@@ -25,6 +25,13 @@ a.logo {
   font-weight: bold;
   font-size: 1.2rem;
   padding: 1rem;
+  color: #e72929;
+}
+
+a.logo:hover,
+a.cart-icon:hover {
+ background-color: white;
+ color: #e72929;
 }
 
 ul {
