@@ -1,4 +1,5 @@
 <app-search></app-search>
+<app-tags></app-tags>
 <ul>
   <li *ngFor="let food of foods">
     <a routerLink="/food/{{ food.id }}">
@@ -12,7 +13,7 @@
             [value]="food.stars"
             [totalstars]="5"
             checkedcolor="red"
-            uncheckedcolor="black"
+            uncheckedcolor="gray"
             size="22px"
             [readonly]="true"
           ></star-rating>
