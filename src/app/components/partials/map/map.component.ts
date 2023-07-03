@@ -29,34 +29,33 @@ export class MapComponent implements OnInit, OnChanges {
 
   constructor(private locationService: LocationService) {}
 
-  ngOnInit(): void {
-    // this.initializeMap();
-  }
+  ngOnInit(): void {}
+
 
   ngOnChanges(): void {
     if (!this.order) return;
     this.initializeMap();
 
     if (this.readonly && this.addressLatLng) {
-      //this.showLocationOnReadonlyMode();
+      this.showLocationOnReadonlyMode();
     }
   }
 
-  // showLocationOnReadonlyMode() {
-  //   const m = this.map;
-  //   this.setMarker(this.addressLatLng);
-  //   m.setView(this.addressLatLng, this.MARKER_ZOOM_LEVEL);
+  showLocationOnReadonlyMode() {
+    const m = this.map;
+    this.setMarker(this.addressLatLng);
+    m.setView(this.addressLatLng, this.MARKER_ZOOM_LEVEL);
 
-  //   m.dragging.disable();
-  //   m.touchZoom.disable();
-  //   m.doubleClickZoom.disable();
-  //   m.scrollWheelZoom.disable();
-  //   m.boxZoom.disable();
-  //   m.keyboard.disable();
-  //   m.off('click');
-  //   m.tap?.disable();
-  //   this.currentMarker.dragging?.disable();
-  // }
+    m.dragging.disable();
+    m.touchZoom.disable();
+    m.doubleClickZoom.disable();
+    m.scrollWheelZoom.disable();
+    m.boxZoom.disable();
+    m.keyboard.disable();
+    m.off('click');
+    m.tap?.disable();
+    this.currentMarker.dragging?.disable();
+  }
 
   initializeMap() {
     if (this.map) return;
