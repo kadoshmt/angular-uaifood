@@ -29,7 +29,7 @@
         </select>
       </div>
       <div>
-        {{ cartItem.price | currency }}
+        {{ cartItem.price | currency:'BRL':'symbol':'':'pt' }}
       </div>
 
       <div>
@@ -42,7 +42,7 @@
   <div class="checkout">
     <div>
       <div class="foods-count">{{ cart.totalCount }}</div>
-      <div class="total-price">{{ cart.totalPrice | currency }}</div>
+      <div class="total-price">{{ cart.totalPrice | currency:'BRL':'symbol':'':'pt' }}</div>
     </div>
 
     <a routerLink="/checkout">Realizar Pagamento</a>

@@ -38,7 +38,7 @@
     </div>
 
     <div class="price">
-      <span>{{ food.price | currency }}</span>
+      <span>{{ food.price | currency:'BRL':'symbol':'':'pt' }}</span>
     </div>
 
     <button (click)="addToCart()">Adicionar</button>
