@@ -31,7 +31,7 @@ export class FoodService {
   }
 
   getAllFoodsByTag(tag: string): Observable<Food[]> {
-    return tag === 'All'
+    return tag === 'Todas'
       ? this.getAll()
       : this.http.get<Food[]>(FOODS_BY_TAG_URL + tag);
   }
